@@ -434,14 +434,28 @@ console.log(sumAllTheYears(movies));
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+const id = function () {
+  const selectId = document.getElementById("container");
+};
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
+const tag = function () {
+  const selectTd = document.querySelectorAll("td");
+};
+
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-
+const stampa = function () {
+  const selectTd = document.querySelectorAll("td");
+  selectTd.forEach((td) => {
+    console.log(td.innerText);
+  });
+};
+console.log(stampa);
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
