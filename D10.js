@@ -75,9 +75,27 @@ console.log(me);
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+console.log("Esercizio 1");
+
+const random2 = function dice() {
+  const random = Math.floor(Math.random() * 6) + 1;
+  return random;
+};
+console.log(random2());
+
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+
+console.log("Esercizio 2");
+const bigger = function whoIsBigger(num1, num2) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+};
+console.log(bigger(2, 6));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
@@ -85,10 +103,18 @@ console.log(me);
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 
+console.log("Esercizio 3");
+const split = function splitMe(stringa) {
+  return stringa.split(" ");
+};
+console.log(split("I love coding"));
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+
+console.log("Esercizio 4");
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
