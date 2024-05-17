@@ -367,8 +367,8 @@ console.log(newestMovie(movies));
 console.log("Esercizio 13");
 
 const countMovies = function (moviesArray) {
-  return moviesArray.filter(function (movie) {
-    return movie.Type === "movie";
+  return moviesArray.filter(function (movies) {
+    return movies.Type === "movie";
   }).length;
 };
 
@@ -380,13 +380,40 @@ console.log(countMovies(movies));
 
 console.log("Esercizio 14");
 
+const onlyTheYears = function (moviesArray) {
+  const years = moviesArray.map(function (movies) {
+    return movies.Year;
+  });
+  return years;
+};
+
+console.log(onlyTheYears(movies));
+
 /* ESERCIZIO 15
   Scrivi una funzione chiamata "onlyInLastMillennium" che ritorna solamente i film prodotto nel millennio scorso contenuti nell'array "movies" fornito.
 */
 
+console.log("Esercizio 15");
+
+const onlyInLastMillennium = function (moviesArray) {
+  const filteredMovies = moviesArray.filter(function (movies) {
+    return movies.Year <= 2000;
+  });
+  return filteredMovies;
+};
+
+console.log(onlyInLastMillennium(movies));
+
 /* ESERCIZIO 16
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
+
+console.log("Esercizio 16");
+const sumAllTheYears = function (array) {
+  return array.reduce((accumulator, currentElement) => accumulator + parseInt(currentElement.Year), 0);
+};
+
+console.log(sumAllTheYears(movies));
 
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
