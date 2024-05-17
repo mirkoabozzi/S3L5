@@ -179,13 +179,37 @@ console.log(day());
   }
 */
 
+console.log("Esercizio 8");
+
+const roll = function rollTheDices(num) {
+  const risultato = {
+    sum: 0,
+    values: [],
+  };
+
+  for (let index = 0; index < num; index++) {
+    const funzioneDice = random2();
+    risultato.sum += funzioneDice;
+    risultato.values.push(funzioneDice);
+  }
+  return risultato;
+};
+console.log(roll(4));
+
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+console.log("Esercizio 9");
+
+const days = function howManyDays() {};
+
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+
+console.log("Esercizio 9");
+const birtday = function isTodayMyBirthday() {};
 
 // Arrays & Oggetti
 
