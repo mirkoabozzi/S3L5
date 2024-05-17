@@ -116,19 +116,55 @@ console.log(split("I love coding"));
 
 console.log("Esercizio 4");
 
+const cancella = function deleteOne(stringa, buleano) {
+  if (buleano === true) {
+    return stringa.slice(1);
+  } else {
+    return stringa.slice(0, -1);
+  }
+};
+console.log(cancella("Prova", false));
+
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+console.log("Esercizio 5");
+
+const lettere = function onlyLetters(stringa) {
+  return stringa.replace(/\d/g, "").trim();
+};
+console.log(lettere("I have dogs"));
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+console.log("Esercizio 6");
+const email = function inThisEmail(stringa) {
+  if (stringa.includes("@")) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(email("indirizzo@gmail.com"));
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+
+console.log("Esercizio 7");
+const day = function whatDayIsIt() {
+  const giorni = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
+  const data = new Date();
+  const giornoDiOggi = data.getDay();
+  return giorni[giornoDiOggi];
+};
+
+console.log(day());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
