@@ -208,9 +208,9 @@ console.log(roll(4));
 */
 
 console.log("Esercizio 10");
-const birtday = function isTodayMyBirthday() {
-  const mioGiorno = 12;
-  const mioMese = 9;
+const birtday = function isTodayMyBirthday(num1, num2) {
+  const mioGiorno = num1;
+  const mioMese = num2;
   const dataDiOggi = new Date();
   const giornoCorrente = dataDiOggi.getDate();
   const meseCorrente = dataDiOggi.getMonth() + 1;
@@ -221,7 +221,7 @@ const birtday = function isTodayMyBirthday() {
     return false;
   }
 };
-console.log(birtday());
+console.log(birtday(12, 9));
 
 // Arrays & Oggetti
 
@@ -231,6 +231,14 @@ console.log(birtday());
   Scrivi una funzione chiamata "deleteProp" che riceve un oggetto e una stringa come parametri; deve ritornare l'oggetto fornito dopo aver eliminato
   in esso la proprietà chiamata come la stringa passata come secondo parametro.
 */
+
+console.log("Esercizio 11");
+
+const prop = function deleteProp(oggetto, stringa) {
+  delete oggetto.stringa;
+  return oggetto;
+};
+console.log(prop(me, "age"));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
