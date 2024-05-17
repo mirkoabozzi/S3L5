@@ -427,6 +427,13 @@ console.log(sumAllTheYears(movies));
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+console.log("Esercizio 19");
+const removeIndex = (numero) => {
+  movies.splice(numero - 1, 1);
+  return movies;
+};
+
+console.log(removeIndex(1));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -449,6 +456,7 @@ const tag = function () {
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+console.log("Esercizio 22");
 const stampa = function () {
   const selectTd = document.querySelectorAll("td");
   selectTd.forEach((td) => {
@@ -459,18 +467,44 @@ console.log(stampa);
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+const bgColor = function () {
+  const selectA = document.querySelectorAll("a");
+  selectA.classList.add("backgroundColor"); //aggiungo una classe specifica a tutti gli <a>che tramite css applicherà il colore rosso di BG
+  // alternativa
+  selectA.forEach((link) => {
+    link.style.backgroundColor = "red";
+  });
+};
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+const newLi = function () {
+  const aggiungiLi = document.createElement("li");
+  const lista = document.getElementsById("myList");
+  lista.appendChild(aggiungiLi);
+};
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+const svuotare = function () {
+  const id = document.getElementById("mylist");
+  id.innerHTML = "";
+};
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+const aggiungiTag = function () {
+  const selectTr = getElementsByTagName("tr");
+  selectTr.forEach((tr) => {
+    tr.classList.add("test");
+  });
+};
 
 // [EXTRA] JS Avanzato
 
