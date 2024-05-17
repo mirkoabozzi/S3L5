@@ -52,13 +52,22 @@ console.log(me);
 
 console.log("Esercizio E");
 
+me.skills = ["Javascript"];
+console.log(me);
+
 /* ESERCIZIO F
   Crea un pezzo di codice per aggiungere un nuovo elemento all'array "skills" contenuto nell'oggetto "me".
 */
+console.log("Esercizio F");
+me.skills.push("Nuovo elemento");
+console.log(me);
 
 /* ESERCIZIO G
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
+console.log("Esercizio G");
+me.skills.pop(1);
+console.log(me);
 
 // Funzioni
 
