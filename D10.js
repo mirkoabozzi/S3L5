@@ -66,7 +66,7 @@ console.log(me);
   Crea un pezzo di codice per rimuovere programmaticamente l'ultimo elemento dall'array "skills" contenuto nell'oggetto "me".
 */
 console.log("Esercizio G");
-me.skills.pop(1);
+me.skills.pop();
 console.log(me);
 
 // Funzioni
@@ -136,7 +136,7 @@ console.log("Esercizio 5");
 const onlyLetters = function (stringa) {
   return stringa.replace(/\d/g, "").trim();
 };
-console.log(onlyLetters("I have dogs"));
+console.log(onlyLetters("I have 4 dogs"));
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
@@ -235,7 +235,7 @@ console.log(isTodayMyBirthday(12, 9));
 console.log("Esercizio 11");
 
 const deleteProp = function (oggetto, stringa) {
-  delete oggetto.stringa;
+  delete oggetto[stringa];
   return oggetto;
 };
 console.log(deleteProp(me, "age"));
