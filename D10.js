@@ -346,7 +346,7 @@ const movies = [
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
 */
-console.log("Esercizio 12");
+console.log("Esercizio 12 forEach");
 
 const newestMovie = function (moviesArray) {
   let newestMovie = moviesArray[0];
@@ -359,6 +359,19 @@ const newestMovie = function (moviesArray) {
 };
 
 console.log(newestMovie(movies));
+
+console.log("Esercizio 12 ciclo for");
+
+const newestMovie2 = (moviesArray) => {
+  let newestMovie = moviesArray[0];
+  for (let i = 0; i < moviesArray.length; i++) {
+    if (moviesArray[i].Year > newestMovie.Year) {
+      newestMovie = moviesArray[i];
+    }
+  }
+  return newestMovie;
+};
+console.log(newestMovie2(movies));
 
 /* ESERCIZIO 13
   Scrivi una funzione chiamata countMovies che ritorna il numero di film contenuti nell'array "movies" fornito.
@@ -426,6 +439,20 @@ console.log(searchByTitle("The Lords of Salem"));
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+console.log("Esercizio 18");
+
+const searchAndDivide = (stringa, movies) => {
+  let obj = { match: [], unmatch: [] };
+  movies.forEach((film) => {
+    if (film.Title.includes(stringa)) {
+      obj.match.push(film);
+    } else {
+      obj.unmatch.push(film);
+    }
+  });
+  return obj;
+};
+console.log(searchAndDivide("Lord", movies));
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
