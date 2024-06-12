@@ -199,9 +199,16 @@ console.log(rollTheDices(4));
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
-// console.log("Esercizio 9");
+console.log("Esercizio 9");
 
-// const days = function howManyDays() {};
+const howManyDays = (data) => {
+  const dataDiOggi = new Date();
+  const dataInput = new Date(data);
+  const diffGiorni = dataDiOggi - dataInput;
+  const giorniTrascorsi = Math.floor(diffGiorni / (1000 * 60 * 60 * 24));
+  return giorniTrascorsi;
+};
+console.log(howManyDays(`6-10-2024`));
 
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
@@ -565,5 +572,3 @@ const aggiungiTag = function () {
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-
-/* Questo array viene usato per gli esercizi. Non modificarlo. */
